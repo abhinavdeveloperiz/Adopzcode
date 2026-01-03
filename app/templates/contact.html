@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- ================= 1. BANNER ================= -->
+<section class="relative bg-cover bg-center"
+    style="background-image:url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-darkgreen/70"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-24">
+        <h1 class="text-4xl font-bold text-cream">Contact Us</h1>
+        <p class="mt-2 text-cream/80">Home <span class="mx-2">></span> Contact</p>
+    </div>
+</section>
+
+
+
+<!-- ================= 3. CONTACT INFO CARDS ================= -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-2 gap-8 text-center">
+
+        <div data-aos="fade-up" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+            <i data-lucide="phone-call" class="mx-auto text-orangebrand mb-4"></i>
+            <h4 class="font-semibold text-darkgreen mb-2">Call Us</h4>
+            <p class="text-sm text-gray-600">+91 95445 97585</p>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+            <i data-lucide="message-circle" class="mx-auto text-orangebrand mb-4"></i>
+            <h4 class="font-semibold text-darkgreen mb-2">WhatsApp</h4>
+            <p class="text-sm text-gray-600">Quick business discussions</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= 4. FORM + IMAGE ================= -->
+<section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    <!-- FORM -->
+    <form data-aos="fade-right"
+          class="bg-white p-10 rounded-3xl shadow-sm">
+
+        <h3 class="text-2xl font-semibold text-darkgreen mb-6">
+            Send Us a Message
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Your Name"
+                   class="border p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-orangebrand">
+            <input type="email" placeholder="Your Email"
+                   class="border p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-orangebrand">
+        </div>
+
+        <input type="text" placeholder="Subject"
+               class="border p-3 rounded-lg w-full mt-4 focus:outline-none focus:ring-2 focus:ring-orangebrand">
+
+        <textarea rows="5" placeholder="Your Message"
+                  class="border p-3 rounded-lg w-full mt-4 focus:outline-none focus:ring-2 focus:ring-orangebrand"></textarea>
+
+        <button type="submit"
+                class="mt-6 bg-orangebrand text-white px-8 py-3 rounded-lg font-medium hover:bg-darkgreen transition">
+            Send Message
+        </button>
+    </form>
+
+    <!-- IMAGE -->
+    <div data-aos="fade-up" class="rounded-3xl overflow-hidden shadow-lg">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3746.648938386924!2d76.80013197502934!3d9.85788749024037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTEnMjguNCJOIDc2wrA0OCcwOS43IkU!5e1!3m2!1sen!2sin!4v1767431016529!5m2!1sen!2sin"
+            class="w-full h-[380px] md:h-[480px] border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+</section>
+
+
+
+
+{% endblock %}

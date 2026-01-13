@@ -36,6 +36,9 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font  -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -47,6 +50,29 @@
         overflow-x: hidden;
     }
 </style>
+
+
+<style>
+    html,
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 400;
+    }
+
+   
+
+    p, li {
+        font-weight: 300;
+    }
+</style>
+
+
 
 <!-- ================= FIXED BDE ACTION BUTTONS ================= -->
 <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
@@ -176,8 +202,12 @@
             </div>
         </div>
 
-        <div class="text-center text-xs text-cream/60 py-4 border-t border-cream/10">
+        <div class="text-center text-xs text-cream py-4 border-t border-cream/10">
             © {{ now|date:"Y" }} ADOPZCODE. All rights reserved.
+        </div>
+
+        <div class="text-center text-xs text-cream py-4">
+            Developed by <a class="hover:text-gray-300" href="https://www.inspirezesttechnologies.com/">Inspirezesttechnologies Pvt Ltd</a>
         </div>
     </footer>
 

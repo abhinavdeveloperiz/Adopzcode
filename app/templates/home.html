@@ -55,7 +55,7 @@
 
         <!-- IMAGE -->
         <div data-aos="fade-right" class="relative">
-            <img src="https://media.istockphoto.com/id/509544166/vector/meeting-distributing-papers.jpg?s=612x612&w=0&k=20&c=_v69JFbMWf9vhYYKLkbo-Lz5fjjfbLQtROvCjYql6xo="
+            <img src="{{ about.image.url }}"
                 alt="About Adopzcode" class="rounded-3xl shadow-lg w-full h-[420px] object-cover">
 
             <!-- Brand overlay -->
@@ -145,81 +145,24 @@
     <div class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6
                 scrollbar-thin scrollbar-thumb-darkgreen/40 scrollbar-track-transparent">
 
+        {% for s in service %}
         <!-- Service 1 -->
         <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
                     group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="https://img.freepik.com/premium-vector/hand-drawn-vector-branding-editable-design_203633-5038.jpg?semt=ais_hybrid&w=740&q=80"
-                class="h-56 w-full object-top object-cover group-hover:scale-105 transition duration-500">
+            <img src="{{ s.image.url }}"
+                class="h-56 w-full  object-cover group-hover:scale-105 transition duration-500">
             <div class="p-8 bg-darkgreen h-full">
                 <h3 class="text-lg font-semibold text-cream mb-2">
-                    Brand Foundation & Strategy
+                    {{ s.title }}
                 </h3>
                 <p class="text-sm text-cream text-justify">
-                    We help you build a brand that speaks with purpose. From defining your story,
-                    vision, and voice to visual identity and brand guidelines.
+                    {{ s.description }}
                 </p>
             </div>
         </div>
 
-        <!-- Service 2 -->
-        <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/069/185/086/small/black-silhouette-of-a-professional-dslr-camera-with-strap-vector.jpg"
-                class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="p-8 bg-darkgreen h-full">
-                <h3 class="text-lg font-semibold text-cream mb-2">
-                    Video Advertising & Storytelling
-                </h3>
-                <p class="text-sm text-cream text-justify">
-                    From concept to final cut, we craft compelling video stories that capture attention.
-                </p>
-            </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="https://media.istockphoto.com/id/1355482896/vector/motion-graphic-design-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=xubI5uIz831TyBPjRAzsuUR3xM2wYAhfy70Jb_q83G8="
-                class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="p-8 bg-darkgreen h-full">
-                <h3 class="text-lg font-semibold text-cream mb-2">
-                    Motion Graphics & Animation
-                </h3>
-                <p class="text-sm text-cream text-justify">
-                    Engaging motion visuals and explainer videos that enhance brand recall.
-                </p>
-            </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="https://png.pngtree.com/png-vector/20190105/ourmid/pngtree-webinarforumonlineseminarwebsite-line-icon--vector-isola-png-image_311452.jpg"
-                class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="p-8 bg-darkgreen h-full">
-                <h3 class="text-lg font-semibold text-cream mb-2">
-                    Website Design & Automation
-                </h3>
-                <p class="text-sm text-cream text-justify">
-                    Sleek, responsive websites with integrated automation for efficiency.
-                </p>
-            </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="https://static.vecteezy.com/system/resources/previews/051/456/524/non_2x/social-media-manager-black-and-white-2d-illustration-concept-smm-managing-online-presence-with-tablet-outline-character-isolated-digital-marketing-advertising-metaphor-monochrome-art-vector.jpg"
-                class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="p-8 bg-darkgreen h-full">
-                <h3 class="text-lg font-semibold text-cream mb-2">
-                    Digital Marketing & Growth
-                </h3>
-                <p class="text-sm text-cream text-justify">
-                    Data-driven strategies to boost visibility, engagement, and ROI.
-                </p>
-            </div>
-        </div>
+        {% endfor %}
+       
     </div>
 
     <!-- Helper text -->

@@ -2,10 +2,12 @@
 {% block content %}
 
 <!-- ================= 1. HERO / BANNER ================= -->
-<section class="relative overflow-hidden bg-cover bg-center">
+<section
+    class="relative min-h-screen w-full overflow-hidden bg-cover bg-center flex items-center"
+    style="background-image: url('{{ banner.image.url }}');">
 
     <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-cream/80"></div>
+    <div class="absolute inset-0 bg-cream/70"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -34,7 +36,7 @@
         </div>
 
         <!-- RIGHT CARD -->
-        <div data-aos="fade-left" class="bg-darkgreen/90 backdrop-blur text-cream rounded-3xl p-10 shadow-xl">
+        <div data-aos="flip-right" class="bg-darkgreen/90 backdrop-blur text-cream rounded-3xl p-10 shadow-xl">
             <h3 class="text-xl font-semibold mb-4">Why Adopzcode</h3>
             <ul class="space-y-3 text-sm">
                 <li class="flex gap-2"><i data-lucide="check-circle"></i> Strategy-led branding</li>
@@ -59,7 +61,7 @@
                 alt="About Adopzcode" class="rounded-3xl shadow-lg w-full h-[420px] object-cover">
 
             <!-- Brand overlay -->
-            <div class="absolute -bottom-6 -left-6 bg-darkgreen text-cream p-6 rounded-2xl shadow-xl">
+            <div data-aos="zoom-in" data-aos-delay="300" class="absolute -bottom-6 -left-6 bg-darkgreen text-cream p-6 rounded-2xl shadow-xl">
                 <h4 class="text-lg font-semibold">Brand-First Thinking</h4>
                 <p class="text-sm text-cream/80 mt-1">
                     Strategy. Design. Growth.
@@ -174,8 +176,8 @@
 
 
 <!-- ================= 4. PROCESS ================= -->
-<section class="max-w-7xl mx-auto px-6 pb-20">
-    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-12" data-aos="fade-up">
+<section class="max-w-7xl mx-auto px-6 pb-20" data-aos="slide-right">
+    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-12" >
         Our Process
     </h2>
 
@@ -196,7 +198,7 @@
 </section>
 
 <!-- ================= 5. WHY CHOOSE US ================= -->
-<section class="bg-darkgreen text-cream py-20">
+<section class="bg-darkgreen text-cream py-20" data-aos="slide-left">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-3 md:grid-cols-3 gap-8 text-center">
 
         <div data-aos="fade-up">
@@ -218,7 +220,7 @@
 </section>
 
 <!-- ================= 6. CTA ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20 text-center">
+<section class="max-w-7xl mx-auto px-6 py-20 text-center" >
     <div data-aos="zoom-in">
         <h2 class="text-3xl font-semibold text-darkgreen mb-4">
             Ready to Elevate Your Brand?

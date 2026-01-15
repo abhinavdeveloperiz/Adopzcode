@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from .models import AboutUs,Service
+from .models import AboutUs,Service,BannerImage
 
 
 def home(request):
+    banner_images = BannerImage.objects.only('image').last()
     service=Service.objects.only('image','title','description')
     aboutus=AboutUs.objects.only('image').last()
     context={
+        'banner':banner_images,
         'service':service,
         'about':aboutus
         }

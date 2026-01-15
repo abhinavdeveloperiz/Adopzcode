@@ -213,9 +213,44 @@
         </div>
 
         <div class="text-center text-xs text-cream py-4">
-            Developed by <a class="hover:text-gray-300"
-                href="https://www.inspirezesttechnologies.com/">Inspirezesttechnologies Pvt Ltd</a>
+            Developed by
+            <a href="https://www.inspirezesttechnologies.com/" class="animated-link">
+                Inspirezesttechnologies Pvt Ltd
+            </a>
         </div>
+
+        <style>
+            .animated-link {
+                position: relative;
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .animated-link:hover {
+                animation: bluePurpleGlow 2.5s linear infinite;
+            }
+
+            @keyframes bluePurpleGlow {
+                0% {
+                    color: #3b82f6;
+                    /* blue */
+                }
+
+                50% {
+                    color: #c284ff;
+                    /* purple */
+                }
+
+                100% {
+                    color: #d13bf6;
+                    /* blue */
+                }
+            }
+        </style>
+
+
+
     </footer>
 
     <!-- Scripts -->
@@ -231,13 +266,13 @@
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        once: true,              
-        mirror: false,          
-        duration: 900,        
-    });
-</script>
+    <script>
+        AOS.init({
+            once: true,
+            mirror: false,
+            duration: 900,
+        });
+    </script>
 
 
 </body>

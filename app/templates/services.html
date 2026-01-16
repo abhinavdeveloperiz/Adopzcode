@@ -31,7 +31,7 @@
 <section class="max-w-7xl mx-auto px-6 py-20">
 
     <!-- Section Heading -->
-    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-24 uppercase" >
+    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-24 uppercase">
         Services
     </h2>
 
@@ -41,9 +41,16 @@
         {% for s in service %}
 
         <div data-aos="slide-left" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="{{ s.image.url }}"
-                class="h-80 w-full object-top object-cover group-hover:scale-105 transition duration-500">
+         group rounded-3xl overflow-hidden bg-white shadow-sm
+         hover:shadow-xl transition">
+
+            <!-- Image Wrapper (forces alignment) -->
+            <div class="relative w-full h-80 overflow-hidden">
+                <img src="{{ s.image.url }}" alt="{{ s.title }}" class="absolute inset-0 w-full h-full object-cover object-center
+             transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Content -->
             <div class="p-8 bg-darkgreen h-full">
                 <h3 class="text-lg font-semibold text-cream mb-2">
                     {{ s.title }}
@@ -52,11 +59,13 @@
                     {{ s.description }}
                 </p>
             </div>
+
         </div>
+
 
         {% endfor %}
 
-       
+
 
 
     </div>
@@ -106,7 +115,7 @@
             Ready to elevate your brand with strategy, creativity, and purpose?
         </p>
         <a href="{% url 'contact' %}"
-           class="bg-orangebrand text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-darkgreen transition">
+            class="bg-orangebrand text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-darkgreen transition">
             Contact Us
         </a>
     </div>

@@ -2,8 +2,7 @@
 {% block content %}
 
 <!-- ================= 1. HERO / BANNER ================= -->
-<section
-    class="relative min-h-screen w-full overflow-hidden bg-cover bg-center flex items-center"
+<section class="relative min-h-screen w-full overflow-hidden bg-cover bg-center flex items-center"
     style="background-image: url('{{ banner.image.url }}');">
 
     <!-- Dark overlay for readability -->
@@ -57,11 +56,12 @@
 
         <!-- IMAGE -->
         <div data-aos="fade-right" class="relative">
-            <img src="{{ about.image.url }}"
-                alt="About Adopzcode" class="rounded-3xl shadow-lg w-full h-[420px] object-cover">
+            <img src="{{ about.image.url }}" alt="About Adopzcode"
+                class="rounded-3xl shadow-lg w-full h-[420px] object-cover">
 
             <!-- Brand overlay -->
-            <div data-aos="zoom-in" data-aos-delay="300" class="absolute -bottom-6 -left-6 bg-darkgreen text-cream p-6 rounded-2xl shadow-xl">
+            <div data-aos="zoom-in" data-aos-delay="300"
+                class="absolute -bottom-6 -left-6 bg-darkgreen text-cream p-6 rounded-2xl shadow-xl">
                 <h4 class="text-lg font-semibold">Brand-First Thinking</h4>
                 <p class="text-sm text-cream/80 mt-1">
                     Strategy. Design. Growth.
@@ -148,11 +148,20 @@
                 scrollbar-thin scrollbar-thumb-darkgreen/40 scrollbar-track-transparent">
 
         {% for s in service %}
-        <!-- Service 1 -->
+        <!-- Service Card -->
         <div data-aos="fade-up" class="snap-center min-w-[320px] md:min-w-[380px] lg:min-w-[420px]
-                    group rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-            <img src="{{ s.image.url }}"
-                class="h-80 w-full  object-cover group-hover:scale-105 transition duration-500">
+         group rounded-3xl overflow-hidden bg-white shadow-sm
+         hover:shadow-xl transition">
+
+            <!-- Image Container (forces same size) -->
+            <div class="relative w-full h-80 overflow-hidden">
+                <img src="{{ s.image.url }}" alt="{{ s.title }}" class="absolute inset-0 w-full h-full
+             object-cover object-center
+             transition-transform duration-500
+             group-hover:scale-105">
+            </div>
+
+            <!-- Content -->
             <div class="p-8 bg-darkgreen h-full">
                 <h3 class="text-lg font-semibold text-cream mb-2">
                     {{ s.title }}
@@ -161,10 +170,11 @@
                     {{ s.description }}
                 </p>
             </div>
-        </div>
 
+        </div>
         {% endfor %}
-       
+
+
     </div>
 
     <!-- Helper text -->
@@ -177,7 +187,7 @@
 
 <!-- ================= 4. PROCESS ================= -->
 <section class="max-w-7xl mx-auto px-6 pb-20" data-aos="slide-right">
-    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-12" >
+    <h2 class="text-3xl font-semibold text-darkgreen text-center mb-12">
         Our Process
     </h2>
 
@@ -220,7 +230,7 @@
 </section>
 
 <!-- ================= 6. CTA ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20 text-center" >
+<section class="max-w-7xl mx-auto px-6 py-20 text-center">
     <div data-aos="zoom-in">
         <h2 class="text-3xl font-semibold text-darkgreen mb-4">
             Ready to Elevate Your Brand?
